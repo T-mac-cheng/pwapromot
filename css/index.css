@@ -1,0 +1,78 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+nav.navbar.navbar-light {
+    background-color: #29adc3;
+    padding: 0;
+    transition: all .5s;
+}
+nav.navbar.navbar-light .navbar-brand {
+    color: white;
+    display: block;
+    font-size: 1rem;
+    margin-right: 0;
+    padding: .4rem;
+}
+nav.navbar.navbar-light .navbar-brand i {
+    font-size: 1.45rem;
+}
+nav.navbar.navbar-light .navbar-brand img {
+    position: relative;
+    width: 2.125rem;
+    padding: .2rem;
+}
+nav.navbar.navbar-light .navbar-brand.search {
+    text-align: right;
+}
+
+
+
+
+.patients{
+    margin-top: 100px;
+    padding: 0;
+}
+
+
+.patients .patient a {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border-bottom: 1px solid #e6e6e6;
+    color: inherit;
+    margin: 4rem 0 .8rem;
+    opacity: 0;
+    padding: 0;
+    text-decoration: none;
+    width: 100%;
+}
+
+.patients .patient a h4 {
+    margin: 1rem 0 0;
+}
+.patients .patient a .process {
+    border: 1px solid #29adc3;
+    border-bottom-left-radius: .6rem;
+    -moz-border-bottom-left-radius: .6rem;
+    -o-border-bottom-left-radius: .6rem;
+    -webkit-border-bottom-left-radius: .6rem;
+    border-bottom-right-radius: .6rem;
+    -moz-border-bottom-right-radius: .6rem;
+    -o-border-bottom-right-radius: .6rem;
+    -webkit-border-bottom-right-radius: .6rem;
+    border-top-left-radius: .6rem;
+    -moz-border-top-left-radius: .6rem;
+    -o-border-top-left-radius: .6rem;
+    -webkit-border-top-left-radius: .6rem;
+    border-top-right-radius: .6rem;
+    -moz-border-top-right-radius: .6rem;
+    -o-border-top-right-radius: .6rem;
+    -webkit-border-top-right-radius: .6rem;
+    color: #b3b3b3;
+    margin: -2rem 0 1rem;
+    padding: 1rem 0;
+    text-align: center;
+    width: 6rem;
+}

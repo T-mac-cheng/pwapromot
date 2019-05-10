@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link rel="manifest" href="plugin/manifest.json">
+    <link rel="apple-touch-icon" href="img/logo5.png">
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/index.css" rel="stylesheet" type="text/css">
+    <meta name="apple-mobile-web-app-titie" content="MINDS">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="overall">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <a class="navbar-brand exit col-6 col-md-2"><i class="iconfont icon-exit"></i></a>
+        <a class="navbar-brand search col-6 col-md-2 order-md-12"><img src="img/search.png" class="img-fluid" alt="Responsive image"></a>
+    </nav>
+
+
+    <div class="container-fluid patients scroll">
+        <div class="data">
+            <div class="container-fluid patient-check">
+              <button class="btn-info btn" id="btn">点击安装</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    function registerServiceWorker() {
+        return navigator.serviceWorker.register('sw.js')
+            .then(registration => {
+                console.log('Service worker successfully registered.');
+                return registration;
+            })
+            .catch(err => {
+                console.error('Unable to register service worker.', err);
+            });
+    }
+    registerServiceWorker();
+
+    var button = document.getElementById('btn');
+    var deferredPrompt = null;
+    window.addEventListener('beforeinstallprompt', function (e) {
+        // 将事件返回存储起来
+        deferredPrompt = e;
+
+        // 取消默认事件
+        e.preventDefault();
+        return false;
+    });
+
+    // 当按钮点击事件触发的时候，再去触发安装横幅的显示
+    button.addEventListener('click', function () {
+        if (deferredPrompt != null) {
+            // 异步触发横幅显示
+            deferredPrompt.prompt();
+            deferredPrompt = null;
+        }
+    });
+</script>
+
+
+</body>
+</html>

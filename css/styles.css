@@ -1,0 +1,1628 @@
+html {
+  height: 100%;
+  touch-acion: none;
+}
+body {
+  touch-acion: none;
+  background-color: white;
+  color: #333;
+  height: inherit;
+}
+a {
+  cursor: pointer;
+}
+a.mask-select,
+a.mask-select-right {
+  display: block;
+  height: 100%;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+}
+.border-box {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+.btn {
+  border-bottom-left-radius: .3rem;
+  -moz-border-bottom-left-radius: .3rem;
+  -o-border-bottom-left-radius: .3rem;
+  -webkit-border-bottom-left-radius: .3rem;
+  border-bottom-right-radius: .3rem;
+  -moz-border-bottom-right-radius: .3rem;
+  -o-border-bottom-right-radius: .3rem;
+  -webkit-border-bottom-right-radius: .3rem;
+  border-top-left-radius: .3rem;
+  -moz-border-top-left-radius: .3rem;
+  -o-border-top-left-radius: .3rem;
+  -webkit-border-top-left-radius: .3rem;
+  border-top-right-radius: .3rem;
+  -moz-border-top-right-radius: .3rem;
+  -o-border-top-right-radius: .3rem;
+  -webkit-border-top-right-radius: .3rem;
+  padding: 1rem;
+}
+.btn.btn-white {
+  background-color: white;
+  border: 1px solid white;
+  color: #29adc3;
+}
+.btn.btn-broder {
+  border: 1px solid #29adc3;
+  color: #29adc3;
+}
+.btn.btn-broder.active {
+  background-color: #29adc3;
+  color: white !important;
+}
+.btn.btn-color {
+  background-color: #29adc3;
+  border: 1px solid white;
+  color: white;
+}
+.btn.btn-color.checked {
+  background-color: white;
+  border: 1px solid #29adc3;
+  color: #29adc3 !important;
+}
+.btn.btn-red {
+  background-color: #e33636;
+  border: 1px solid white;
+  color: white;
+}
+.btn.focus,
+.btn:focus {
+  box-shadow: none;
+}
+.consulatation {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  height: inherit;
+  padding: 3rem 0 6rem;
+}
+.consulatation .listing {
+  border-top: 1px solid #e6e6e6;
+  margin-top: 1.5rem;
+  padding: 1.5rem 1rem 1rem;
+}
+.consulatation .listing:before {
+  background-color: white;
+  content: "审批单";
+  font-size: 1.2rem;
+  margin: -2.5rem -1rem;
+  padding: 0 1rem;
+  position: absolute;
+}
+.consulatation .advices {
+  border-top: 1px solid #e6e6e6;
+  padding: 1rem 0 6rem;
+}
+.consulatation .advices a {
+  border-bottom: 1px solid #e6e6e6;
+  display: block;
+  margin: 0 1rem;
+  position: relative;
+}
+.consulatation .advices a .body {
+  margin: 0;
+}
+.consulatation .advices a .body ul.list-unstyled > li {
+  padding: 0 .5rem;
+}
+.consulatation .advices a h4 {
+  margin: 0 0 0 2.8rem;
+  padding: 1rem .5rem .5rem;
+  position: relative;
+}
+.consulatation .advices a h4 i {
+  color: #333;
+  font-size: 1.5rem;
+  font-style: normal;
+  margin-left: -3rem;
+  margin-right: .5rem;
+  padding: 0 .2rem .1rem;
+}
+.consulatation .advices a.group:after,
+.consulatation .advices a.group:before {
+  background-color: #29adc3;
+  content: "";
+  height: 50%;
+  left: -.2rem;
+  position: absolute;
+  width: .2rem;
+}
+.consulatation .advices a.group:after,
+.consulatation .advices a.group.head:before {
+  top: 50%;
+}
+.consulatation .advices a.group.foot:after,
+.consulatation .advices a.group.head:before {
+  height: .2rem;
+  width: .5rem;
+}
+.consulatation .advices:before {
+  background-color: white;
+  content: "审批项目";
+  font-size: 1.2rem;
+  margin: -2rem 0;
+  padding: 0 1rem;
+  position: absolute;
+}
+.consulatation .opinion {
+  background-color: white;
+  border-top: 1px solid #e6e6e6;
+  bottom: 0;
+  height: 6rem;
+  margin: 0;
+  padding: 0 1rem;
+  position: fixed;
+  width: 100%;
+}
+.consulatation .opinion .col {
+  padding: 0;
+}
+.consulatation .opinion .col .form-group {
+  margin: 1.2rem 0 0;
+}
+.consulatation .opinion .col .form-group .form-control {
+  background-color: white;
+  border-color: #737373;
+  color: #737373;
+  padding: .5rem;
+  text-align: left;
+}
+.consulatation .opinion .col .form-group label {
+  background-color: white;
+  color: #737373;
+  left: .5rem;
+}
+.consulatation .opinion .col-auto {
+  padding: 0;
+}
+.consulatation .opinion .col-auto button {
+  display: block;
+  margin: .4rem 0 0 .4rem;
+  padding: .4rem 0;
+  width: 6rem;
+}
+.consulatation .process {
+  border: 1px solid #29adc3;
+  border-bottom-left-radius: .6rem;
+  -moz-border-bottom-left-radius: .6rem;
+  -o-border-bottom-left-radius: .6rem;
+  -webkit-border-bottom-left-radius: .6rem;
+  border-bottom-right-radius: .6rem;
+  -moz-border-bottom-right-radius: .6rem;
+  -o-border-bottom-right-radius: .6rem;
+  -webkit-border-bottom-right-radius: .6rem;
+  border-top-left-radius: .6rem;
+  -moz-border-top-left-radius: .6rem;
+  -o-border-top-left-radius: .6rem;
+  -webkit-border-top-left-radius: .6rem;
+  border-top-right-radius: .6rem;
+  -moz-border-top-right-radius: .6rem;
+  -o-border-top-right-radius: .6rem;
+  -webkit-border-top-right-radius: .6rem;
+  color: #b3b3b3;
+  margin: 1rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 1rem 0;
+  text-align: center;
+}
+.consulatation .process ul {
+  margin: auto;
+  margin-bottom: 0;
+  width: max-content;
+}
+.consulatation .process ul li:before {
+  content: "→";
+  margin-right: .5rem;
+}
+.consulatation .process ul li:first-child:before {
+  content: "";
+}
+.consulatation .process ul li.color {
+  color: #29adc3;
+}
+.consulatation .process:before {
+  background-color: white;
+  color: #29adc3;
+  content: "审批流程";
+  font-size: .6rem;
+  left: 1.5rem;
+  margin-top: -1.8rem;
+  padding: .2rem;
+  position: absolute;
+}
+.data.nothing:after {
+  border: 1px solid #cccccc;
+  border-bottom-left-radius: .5rem;
+  -moz-border-bottom-left-radius: .5rem;
+  -o-border-bottom-left-radius: .5rem;
+  -webkit-border-bottom-left-radius: .5rem;
+  border-bottom-right-radius: .5rem;
+  -moz-border-bottom-right-radius: .5rem;
+  -o-border-bottom-right-radius: .5rem;
+  -webkit-border-bottom-right-radius: .5rem;
+  border-top-left-radius: .5rem;
+  -moz-border-top-left-radius: .5rem;
+  -o-border-top-left-radius: .5rem;
+  -webkit-border-top-left-radius: .5rem;
+  border-top-right-radius: .5rem;
+  -moz-border-top-right-radius: .5rem;
+  -o-border-top-right-radius: .5rem;
+  -webkit-border-top-right-radius: .5rem;
+  color: #cccccc;
+  content: "暂无数据";
+  font-size: 2rem;
+  margin: 5%;
+  position: absolute;
+  padding: 15%;
+  text-align: center;
+  width: 90%;
+}
+.examine {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  height: inherit;
+  padding-top: 12rem;
+}
+.examine .examines {
+  height: inherit;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.examine .examines a {
+  border-bottom: 1px solid #e6e6e6;
+  display: block;
+  margin: 0 1rem;
+  position: relative;
+}
+.examine .examines a .body {
+  margin: 0;
+}
+.examine .examines a .body ul.list-unstyled > li {
+  padding: 0 .5rem;
+}
+.examine .examines a .body ul.list-unstyled > li.background {
+  background-color: #f7f7f7;
+}
+.examine .examines a .body ul.list-unstyled > li.background span {
+  color: #f7f7f7;
+}
+.examine .examines a .body .col-sm-3 {
+  color: #999999;
+  text-align: right;
+}
+.examine .examines a .body .col-sm-3 .font-b {
+  font-size: 1.2rem;
+  margin-top: -.5rem;
+}
+.examine .examines a .body .col-sm-6 {
+  padding: 0 .5rem;
+}
+.examine .examines a h4 {
+  margin: 0 0 0 2.8rem;
+  padding: 1rem .5rem .5rem;
+  position: relative;
+}
+.examine .examines a h4 i {
+  color: #333;
+  font-size: 1.5rem;
+  font-style: normal;
+  margin-left: -3rem;
+  margin-right: .5rem;
+  padding: 0 .2rem .1rem;
+}
+.examine .examines a h4 span.checkbox {
+  background-color: #29adc3;
+  color: white;
+  display: none;
+  font-size: 1rem;
+  padding: .2rem 0;
+  position: absolute;
+  right: 6.5rem;
+  text-align: center;
+  width: 5rem;
+}
+.examine .examines a h4 span.checkbox.checked {
+  display: inline-grid;
+}
+.examine .examines a h4:after {
+  color: white;
+  font-size: 1rem;
+  padding: .2rem 0;
+  position: absolute;
+  right: 1rem;
+  text-align: center;
+  width: 5rem;
+}
+.examine .examines a h4.new:before {
+  color: #29adc3;
+  content: "NEW";
+  font-size: .8rem;
+  margin-top: 2rem;
+  position: absolute;
+  right: 1.1rem;
+}
+.examine .examines a h4.careful:after {
+  background-color: #64a6e4;
+  content: "慎用";
+}
+.examine .examines a h4.disable:after {
+  background-color: #e64c4c;
+  content: "禁用";
+}
+.examine .examines a h4.recommend:after {
+  background-color: #f2a021;
+  content: "不推荐";
+}
+.examine .examines a.group:after,
+.examine .examines a.group:before {
+  background-color: #29adc3;
+  content: "";
+  height: 50%;
+  left: -.2rem;
+  position: absolute;
+  width: .2rem;
+}
+.examine .examines a.group:after,
+.examine .examines a.group.head:before {
+  top: 50%;
+}
+.examine .examines a.group.foot:after,
+.examine .examines a.group.head:before {
+  height: .2rem;
+  width: .5rem;
+}
+.examine .examines.advices.load > a {
+  margin-top: 3rem;
+  opacity: 0;
+}
+.examine .patientdata {
+  background-color: white;
+  border-bottom: 1px solid #e6e6e6;
+  display: none;
+  height: 8.5rem;
+  padding-top: 1rem;
+  position: fixed;
+  top: 3rem;
+  width: 100%;
+  z-index: 1;
+}
+.examine .patientdata .btn {
+  background-color: white;
+  border: 1px solid #29adc3;
+  color: #29adc3;
+}
+.examine .patientdata .col {
+  overflow: hidden;
+}
+.examine .patientdata .col .ulpartant {
+  overflow: auto;
+}
+.examine .patientdata .col .ulpartant button {
+  position: absolute;
+  right: 1rem;
+  top: 0;
+}
+.examine .patientdata .col .ulpartant ul.list-unstyled,
+.examine .patientdata .col .ulpartant h4 {
+  width: max-content;
+}
+.examine .patientdata .col .ulpartant ul.list-unstyled .line,
+.examine .patientdata .col .ulpartant h4 .line {
+  display: initial;
+  margin-right: 2rem;
+}
+.form-group {
+  margin: 1rem 1rem 2rem;
+}
+.form-group .form-control {
+  background-color: #29adc3;
+  border-color: white;
+  border-bottom-left-radius: .3rem;
+  -moz-border-bottom-left-radius: .3rem;
+  -o-border-bottom-left-radius: .3rem;
+  -webkit-border-bottom-left-radius: .3rem;
+  border-bottom-right-radius: .3rem;
+  -moz-border-bottom-right-radius: .3rem;
+  -o-border-bottom-right-radius: .3rem;
+  -webkit-border-bottom-right-radius: .3rem;
+  border-top-left-radius: .3rem;
+  -moz-border-top-left-radius: .3rem;
+  -o-border-top-left-radius: .3rem;
+  -webkit-border-top-left-radius: .3rem;
+  border-top-right-radius: .3rem;
+  -moz-border-top-right-radius: .3rem;
+  -o-border-top-right-radius: .3rem;
+  -webkit-border-top-right-radius: .3rem;
+  color: white;
+  padding: 1.2rem .4rem;
+  text-align: center;
+}
+.form-group .form-control.check {
+  display: flex;
+  margin: 0;
+  padding: .6rem .4rem;
+}
+.form-group .form-control.check > div {
+  padding: .2rem;
+}
+.form-group .form-control.check > div .btn {
+  background-color: #259eb2;
+}
+.form-group .form-control.check > div .btn.checked {
+  background-color: white;
+  color: #29adc3;
+}
+.form-group .form-control:focus {
+  box-shadow: none;
+}
+.form-group .form-control::-webkit-input-placeholder {
+  color: white;
+}
+.form-group .form-control input-placeholder {
+  color: white;
+}
+.form-group label {
+  background-color: #29adc3;
+  color: white;
+  font-size: .8rem;
+  padding: 0 .5rem;
+  position: absolute;
+  left: 1.5rem;
+  margin-top: -.5rem;
+}
+.form-group.select:before {
+  border-bottom: 1rem solid transparent;
+  border-left: 1rem solid transparent;
+  border-right: .5rem solid white;
+  border-top: 1rem solid transparent;
+  content: "";
+  height: 0;
+  left: .5rem;
+  margin-top: 1rem;
+  position: absolute;
+  transition: all .2s;
+  width: 0;
+  z-index: 1;
+}
+.form-group.select.opened:before {
+  left: -.8rem;
+}
+.iconfont {
+  font-family: "iconfont" !important;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.login {
+  background-color: #29adc3;
+  color: white;
+  padding-top: 5%;
+}
+.login .container {
+  display: none;
+}
+.login .container .form-group {
+  margin: 0 0 1rem;
+}
+.login .container span {
+  border: 1px solid white;
+}
+.login .container span.checked {
+  background-color: white;
+  color: #29adc3 !important;
+}
+.login .title {
+  display: none;
+  padding: 2rem;
+}
+.login .title img {
+  width: 5rem;
+  margin: 1rem;
+}
+.login .modal {
+  color: #333;
+}
+.modal .modal-content {
+  border-bottom-left-radius: .4rem;
+  -moz-border-bottom-left-radius: .4rem;
+  -o-border-bottom-left-radius: .4rem;
+  -webkit-border-bottom-left-radius: .4rem;
+  border-bottom-right-radius: .4rem;
+  -moz-border-bottom-right-radius: .4rem;
+  -o-border-bottom-right-radius: .4rem;
+  -webkit-border-bottom-right-radius: .4rem;
+  border-top-left-radius: .4rem;
+  -moz-border-top-left-radius: .4rem;
+  -o-border-top-left-radius: .4rem;
+  -webkit-border-top-left-radius: .4rem;
+  border-top-right-radius: .4rem;
+  -moz-border-top-right-radius: .4rem;
+  -o-border-top-right-radius: .4rem;
+  -webkit-border-top-right-radius: .4rem;
+}
+.modal .modal-content .modal-footer {
+  border-top: none;
+  padding: 0;
+}
+.modal .modal-content .modal-footer .btn-group {
+  display: contents;
+}
+.modal .modal-content .modal-footer .btn-group .btn {
+  background-color: #e33636;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  color: white;
+}
+.modal .modal-content .modal-footer .btn-group .btn.sure {
+  background-color: #29adc3;
+}
+.modal .modal-content p {
+  margin: 1rem;
+}
+.mask {
+  display: block;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1030;
+}
+.mask-select,
+.mask-select-right {
+  width: 18rem;
+  z-index: 1032;
+}
+nav.navbar.navbar-light {
+  background-color: #29adc3;
+  margin-bottom: -4rem;
+  margin-top: -4rem;
+  padding: 0;
+  transition: all .5s;
+}
+nav.navbar.navbar-light .navbar-brand {
+  color: white;
+  display: block;
+  font-size: 1rem;
+  margin-right: 0;
+  padding: .4rem;
+}
+nav.navbar.navbar-light .navbar-brand button.patientinfo {
+  background-color: white;
+  color: #29adc3;
+  margin-left: .5rem;
+  padding: .2rem 1rem;
+}
+nav.navbar.navbar-light .navbar-brand i {
+  font-size: 1.45rem;
+}
+nav.navbar.navbar-light .navbar-brand img {
+  position: relative;
+  width: 2.125rem;
+  padding: .2rem;
+}
+nav.navbar.navbar-light .navbar-brand img.opened {
+  z-index: 1031;
+}
+nav.navbar.navbar-light .navbar-brand span {
+  display: block;
+  padding: .3rem;
+}
+nav.navbar.navbar-light .navbar-brand.adopt {
+  background-color: #36bed5;
+}
+nav.navbar.navbar-light .navbar-brand.clean {
+  background-color: #e33636;
+}
+nav.navbar.navbar-light .navbar-brand.next {
+  background-color: #4fc6da;
+}
+nav.navbar.navbar-light .navbar-brand.pass {
+  color: white;
+  margin-top: .2rem;
+  padding: .5rem;
+  position: absolute;
+  right: 4rem;
+}
+nav.navbar.navbar-light .navbar-brand.search {
+  text-align: right;
+}
+nav.navbar.navbar-light .d-md-none {
+  background-color: #f7f7f7;
+  height: 2rem;
+  position: absolute;
+  top: 3rem;
+  width: 100%;
+}
+nav.navbar.navbar-light .left,
+nav.navbar.navbar-light .right,
+nav.navbar.navbar-light .right-select {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  height: 100%;
+  padding-top: 3rem;
+  position: fixed;
+  top: 0;
+  transition: all .5s;
+}
+nav.navbar.navbar-light .left .content,
+nav.navbar.navbar-light .right .content,
+nav.navbar.navbar-light .right-select .content {
+  position: relative;
+  padding: 1rem 0;
+  height: inherit;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+nav.navbar.navbar-light .left .content li a,
+nav.navbar.navbar-light .right .content li a,
+nav.navbar.navbar-light .right-select .content li a {
+  color: white;
+  display: block;
+  padding: 1.5rem;
+}
+nav.navbar.navbar-light .left .content li.active,
+nav.navbar.navbar-light .right .content li.active,
+nav.navbar.navbar-light .right-select .content li.active {
+  background-color: #29adc3;
+}
+nav.navbar.navbar-light .left {
+  background-color: #47c3d8;
+  left: -15rem;
+  width: 15rem;
+}
+nav.navbar.navbar-light .left span {
+  color: #ffffff;
+  position: absolute;
+  right: .8rem;
+  top: .8rem;
+}
+nav.navbar.navbar-light .left.opened {
+  left: 0;
+}
+nav.navbar.navbar-light .navbar-collapse {
+  background-color: #29adc3;
+  flex-basis: auto;
+}
+nav.navbar.navbar-light .navbar-collapse .navbar-nav {
+  flex-direction: row;
+  margin: auto;
+  width: 100%;
+}
+nav.navbar.navbar-light .navbar-collapse .navbar-nav li {
+  padding: 0 .1rem;
+  text-align: center;
+  transition: all 1s;
+}
+nav.navbar.navbar-light .navbar-collapse .navbar-nav li span {
+  background-color: #259aae;
+  border-bottom-left-radius: 0;
+  -moz-border-bottom-left-radius: 0;
+  -o-border-bottom-left-radius: 0;
+  -webkit-border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  -moz-border-bottom-right-radius: 0;
+  -o-border-bottom-right-radius: 0;
+  -webkit-border-bottom-right-radius: 0;
+  border-top-left-radius: 1rem;
+  -moz-border-top-left-radius: 1rem;
+  -o-border-top-left-radius: 1rem;
+  -webkit-border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  -moz-border-top-right-radius: 1rem;
+  -o-border-top-right-radius: 1rem;
+  -webkit-border-top-right-radius: 1rem;
+  color: #29adc3;
+  height: 2.4rem;
+  margin-top: 1rem;
+  padding-top: .5rem;
+}
+nav.navbar.navbar-light .navbar-collapse .navbar-nav li span.checked {
+  background-color: white;
+}
+nav.navbar.navbar-light .right {
+  background-color: #29adc3;
+  right: -18rem;
+  width: 18rem;
+}
+nav.navbar.navbar-light .right .btn-group {
+  position: fixed;
+  right: -10rem;
+  top: .2rem;
+  transition: all .5s;
+}
+nav.navbar.navbar-light .right .btn-group .btn {
+  border: 1px solid #47c3d8;
+  border-bottom-left-radius: 3rem;
+  -moz-border-bottom-left-radius: 3rem;
+  -o-border-bottom-left-radius: 3rem;
+  -webkit-border-bottom-left-radius: 3rem;
+  border-bottom-right-radius: 3rem;
+  -moz-border-bottom-right-radius: 3rem;
+  -o-border-bottom-right-radius: 3rem;
+  -webkit-border-bottom-right-radius: 3rem;
+  border-top-left-radius: 3rem;
+  -moz-border-top-left-radius: 3rem;
+  -o-border-top-left-radius: 3rem;
+  -webkit-border-top-left-radius: 3rem;
+  border-top-right-radius: 3rem;
+  -moz-border-top-right-radius: 3rem;
+  -o-border-top-right-radius: 3rem;
+  -webkit-border-top-right-radius: 3rem;
+  color: white;
+  padding: .5rem 1rem;
+}
+nav.navbar.navbar-light .right .btn-group .btn:first-child {
+  background-color: #4d4d4d;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+nav.navbar.navbar-light .right .btn-group .btn:last-child {
+  background-color: #29adc3;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+nav.navbar.navbar-light .right.opened {
+  right: 0;
+  z-index: 1030;
+}
+nav.navbar.navbar-light .right.opened .btn-group {
+  right: 3rem;
+}
+nav.navbar.navbar-light .right-select {
+  padding-top: 0;
+  right: -14rem;
+  width: 14rem;
+}
+nav.navbar.navbar-light .right-select .content {
+  background-color: #47c3d8;
+  padding: 1rem 0;
+}
+nav.navbar.navbar-light .right-select.opened {
+  right: 18rem;
+}
+nav.navbar.navbar-light.talk-right {
+  margin-top: 0;
+}
+.overflow-y {
+  height: inherit;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.patients {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  height: inherit;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  padding-top: 3.5rem;
+}
+.patients .loadstart {
+  background-image: url(../img/loading.png);
+  background-repeat: round;
+  height: 4rem;
+  margin: .5rem auto;
+  width: 4rem;
+}
+.patients .loadstart.loading {
+  background-image: url(../img/loading.gif);
+}
+.patients .patient {
+  padding: 0;
+}
+.patients .patient a {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border-bottom: 1px solid #e6e6e6;
+  color: inherit;
+  margin: 4rem 0 .8rem;
+  opacity: 0;
+  padding: 0;
+  text-decoration: none;
+  width: 100%;
+}
+.patients .patient a .col button {
+  background-color: white;
+  border: 1px solid #29adc3;
+  color: #29adc3;
+  margin: .5rem 0;
+  padding: .5rem;
+}
+.patients .patient a .col button:after {
+  background-color: #29adc3;
+  color: white;
+  content: "2";
+  right: -.8rem;
+  position: absolute;
+  width: 1.6rem;
+}
+.patients .patient a .col .focus {
+  margin: .5rem .2rem 0;
+  padding: 0;
+  text-align: center;
+}
+.patients .patient a .col .focus li {
+  text-align: center;
+}
+.patients .patient a .col .focus li i {
+  color: #29adc3;
+  font-size: 1.5rem;
+}
+.patients .patient a .col .focus li span {
+  border: 1px solid #29adc3;
+  color: #29adc3;
+}
+.patients .patient a .col .focus li.choose span {
+  padding: .5rem;
+}
+.patients .patient a .col .focus li.choose span.checked {
+  background-color: #29adc3;
+  color: white;
+}
+.patients .patient a .col .kind {
+  margin: .8rem 0 0;
+}
+.patients .patient a .col .kind li {
+  background-color: #f7f7f7;
+  border: 1px solid white;
+  margin-right: 0;
+  padding: .2rem 0.3rem;
+}
+.patients .patient a .col .kind li i {
+  color: white;
+  display: block;
+}
+.patients .patient a .col .kind li.active {
+  background-color: #29adc3;
+}
+.patients .patient a h4 {
+  margin: 1rem 0 0;
+}
+.patients .patient a .num {
+  background-color: #29adc3;
+  border-bottom-left-radius: .5rem;
+  -moz-border-bottom-left-radius: .5rem;
+  -o-border-bottom-left-radius: .5rem;
+  -webkit-border-bottom-left-radius: .5rem;
+  border-bottom-right-radius: .5rem;
+  -moz-border-bottom-right-radius: .5rem;
+  -o-border-bottom-right-radius: .5rem;
+  -webkit-border-bottom-right-radius: .5rem;
+  border-top-left-radius: .5rem;
+  -moz-border-top-left-radius: .5rem;
+  -o-border-top-left-radius: .5rem;
+  -webkit-border-top-left-radius: .5rem;
+  border-top-right-radius: .5rem;
+  -moz-border-top-right-radius: .5rem;
+  -o-border-top-right-radius: .5rem;
+  -webkit-border-top-right-radius: .5rem;
+  height: 6rem;
+  margin: 1rem 0 1rem 1rem;
+  text-align: center;
+  width: 6rem;
+}
+.patients .patient a .num p {
+  color: white;
+  margin-top: -.5rem;
+}
+.patients .patient a .num ul {
+  color: white;
+  margin-top: 2rem;
+}
+.patients .patient a .num ul li {
+  margin-left: .1rem;
+  margin-right: 0;
+}
+.patients .patient a .num ul li i {
+  font-size: 1.2rem;
+}
+.patients .patient a .num ul.new {
+  border-bottom: 2px solid #29adc3;
+  color: #71d1e1;
+}
+.patients .patient a .num.disable {
+  background-color: #e33636;
+}
+.patients .patient a .num.disable:before {
+  color: white;
+  content: "禁用";
+  position: absolute;
+  margin-left: -2.5rem;
+}
+.patients .patient a .num.careful {
+  background-color: #4e9ae0;
+}
+.patients .patient a .num.careful:before {
+  color: white;
+  content: "慎用";
+  position: absolute;
+  margin-left: -2.5rem;
+}
+.patients .patient a .num.recommend {
+  background-color: #eb950e;
+}
+.patients .patient a .num.recommend:before {
+  color: white;
+  content: "不推荐";
+  position: absolute;
+  margin-left: -2.5rem;
+}
+.patients .patient a .process {
+  border: 1px solid #29adc3;
+  border-bottom-left-radius: .6rem;
+  -moz-border-bottom-left-radius: .6rem;
+  -o-border-bottom-left-radius: .6rem;
+  -webkit-border-bottom-left-radius: .6rem;
+  border-bottom-right-radius: .6rem;
+  -moz-border-bottom-right-radius: .6rem;
+  -o-border-bottom-right-radius: .6rem;
+  -webkit-border-bottom-right-radius: .6rem;
+  border-top-left-radius: .6rem;
+  -moz-border-top-left-radius: .6rem;
+  -o-border-top-left-radius: .6rem;
+  -webkit-border-top-left-radius: .6rem;
+  border-top-right-radius: .6rem;
+  -moz-border-top-right-radius: .6rem;
+  -o-border-top-right-radius: .6rem;
+  -webkit-border-top-right-radius: .6rem;
+  color: #b3b3b3;
+  margin: -2rem 0 1rem;
+  padding: 1rem 0;
+  text-align: center;
+  width: 6rem;
+}
+.patients .patient a .process li:before {
+  display: block;
+  content: "↓";
+}
+.patients .patient a .process li:first-child:before {
+  content: "";
+}
+.patients .patient a .process li.color {
+  color: #29adc3;
+}
+.patients .patient a .process:before {
+  background-color: white;
+  color: #29adc3;
+  content: "审批流程";
+  font-size: .6rem;
+  left: 1rem;
+  position: absolute;
+  top: -.6rem;
+  width: 3.8rem;
+}
+.right {
+  height: inherit;
+  padding: 3rem 0 0;
+  transition: all .5s;
+}
+.right .content {
+  height: inherit;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.right .content.advices.load > a {
+  margin-top: 3rem;
+  opacity: 0;
+}
+.right-audit,
+.right-child,
+.right-drug {
+  background-color: white;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-shadow: -0.5rem 0 0.5rem 0 rgba(0, 0, 0, 0.1);
+  padding: 0 0 6rem;
+  position: fixed;
+  right: -100%;
+  top: 0;
+  width: 80%;
+  z-index: 1031;
+}
+.right-audit .bottom,
+.right-child .bottom,
+.right-drug .bottom {
+  background-color: white;
+  border-top: 1px solid #e6e6e6;
+  margin: 0;
+  padding: 0 1rem;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 1031;
+}
+.right-audit .bottom .col,
+.right-child .bottom .col,
+.right-drug .bottom .col {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0;
+}
+.right-audit .bottom .col ul,
+.right-child .bottom .col ul,
+.right-drug .bottom .col ul {
+  width: max-content;
+  width: -moz-max-content;
+}
+.right-audit .bottom .col .form-group,
+.right-child .bottom .col .form-group,
+.right-drug .bottom .col .form-group {
+  margin: 1.2rem 0 0;
+}
+.right-audit .bottom .col .form-group .form-control,
+.right-child .bottom .col .form-group .form-control,
+.right-drug .bottom .col .form-group .form-control {
+  background-color: white;
+  border-color: #737373;
+  color: #737373;
+  padding: .5rem;
+  text-align: left;
+}
+.right-audit .bottom .col .form-group label,
+.right-child .bottom .col .form-group label,
+.right-drug .bottom .col .form-group label {
+  background-color: white;
+  color: #737373;
+  left: .8rem;
+}
+.right-audit .bottom .col-auto,
+.right-child .bottom .col-auto,
+.right-drug .bottom .col-auto {
+  padding-right: 0;
+}
+.right-audit .bottom .col-auto:last-child,
+.right-child .bottom .col-auto:last-child,
+.right-drug .bottom .col-auto:last-child {
+  padding: 0;
+}
+.right-audit .bottom .col-auto:last-child button,
+.right-child .bottom .col-auto:last-child button,
+.right-drug .bottom .col-auto:last-child button {
+  background-color: #29adc3;
+  color: white;
+  display: block;
+  margin: .4rem 0 0 .4rem;
+  padding: .4rem 2rem;
+}
+.right-audit .bottom .form-group.select,
+.right-child .bottom .form-group.select,
+.right-drug .bottom .form-group.select {
+  margin: 1.4rem 0 0;
+}
+.right-audit .bottom .form-group.select .form-control,
+.right-child .bottom .form-group.select .form-control,
+.right-drug .bottom .form-group.select .form-control {
+  background-color: white;
+  border-color: #29adc3;
+  color: #29adc3;
+  width: 14rem;
+}
+.right-audit .bottom .form-group.select label,
+.right-child .bottom .form-group.select label,
+.right-drug .bottom .form-group.select label {
+  background-color: white;
+  color: #29adc3;
+}
+.right-audit .bottom .form-group.select:before,
+.right-child .bottom .form-group.select:before,
+.right-drug .bottom .form-group.select:before {
+  border-right: 0.5rem solid #29adc3;
+  border-left: 1rem solid transparent;
+}
+.right-audit .bottom .form-group.select.opened:before,
+.right-child .bottom .form-group.select.opened:before,
+.right-drug .bottom .form-group.select.opened:before {
+  left: -.5rem;
+}
+.right-audit .bottom .left-select,
+.right-child .bottom .left-select,
+.right-drug .bottom .left-select {
+  background-color: #47c3d8;
+  height: 100%;
+  position: fixed;
+  right: -15rem;
+  top: 0;
+  transition: all .5s;
+  width: 15rem;
+  z-index: 1032;
+}
+.right-audit .bottom .left-select ul li,
+.right-child .bottom .left-select ul li,
+.right-drug .bottom .left-select ul li {
+  padding: 0;
+}
+.right-audit .bottom .left-select ul li a,
+.right-child .bottom .left-select ul li a,
+.right-drug .bottom .left-select ul li a {
+  color: #ffffff;
+  display: block;
+  padding: 1.5rem;
+}
+.right-audit .bottom .left-select ul li.active,
+.right-child .bottom .left-select ul li.active,
+.right-drug .bottom .left-select ul li.active {
+  background-color: #29adc3;
+}
+.right-audit .bottom .left-select.opened,
+.right-child .bottom .left-select.opened,
+.right-drug .bottom .left-select.opened {
+  right: 0;
+}
+.right-audit .bottom ul,
+.right-child .bottom ul,
+.right-drug .bottom ul {
+  border-bottom: none;
+  margin-top: 1rem;
+}
+.right-audit .bottom ul li,
+.right-child .bottom ul li,
+.right-drug .bottom ul li {
+  padding: .5rem .2rem 1rem;
+}
+.right-audit .bottom ul li span,
+.right-child .bottom ul li span,
+.right-drug .bottom ul li span {
+  color: #29adc3;
+}
+.right-audit .bottom ul li span.checked,
+.right-child .bottom ul li span.checked,
+.right-drug .bottom ul li span.checked {
+  background-color: #29adc3;
+  color: white;
+}
+.right-audit .content a,
+.right-child .content a,
+.right-drug .content a {
+  border-bottom: 1px solid #e6e6e6;
+  display: block;
+  margin: 0 1rem;
+  position: relative;
+}
+.right-audit .content a .body ul.list-unstyled > li,
+.right-child .content a .body ul.list-unstyled > li,
+.right-drug .content a .body ul.list-unstyled > li {
+  padding: 0 .5rem;
+}
+.right-audit .content a .body ul.list-unstyled > li.background,
+.right-child .content a .body ul.list-unstyled > li.background,
+.right-drug .content a .body ul.list-unstyled > li.background {
+  background-color: #f7f7f7;
+}
+.right-audit .content a .body ul.list-unstyled > li.background span,
+.right-child .content a .body ul.list-unstyled > li.background span,
+.right-drug .content a .body ul.list-unstyled > li.background span {
+  color: #f7f7f7;
+}
+.right-audit .content a .body .col-sm-3,
+.right-child .content a .body .col-sm-3,
+.right-drug .content a .body .col-sm-3 {
+  color: #999999;
+  text-align: right;
+}
+.right-audit .content a .body .col-sm-3 .font-b,
+.right-child .content a .body .col-sm-3 .font-b,
+.right-drug .content a .body .col-sm-3 .font-b {
+  font-size: 1.2rem;
+  margin-top: -.5rem;
+}
+.right-audit .content a .body .col-sm-6,
+.right-child .content a .body .col-sm-6,
+.right-drug .content a .body .col-sm-6 {
+  padding: 0 .5rem;
+}
+.right-audit .content a h4,
+.right-child .content a h4,
+.right-drug .content a h4 {
+  margin: 0 0 0 2.8rem;
+  padding: 1rem .5rem .5rem;
+  position: relative;
+}
+.right-audit .content a h4 i,
+.right-child .content a h4 i,
+.right-drug .content a h4 i {
+  color: #333;
+  font-size: 1.5rem;
+  font-style: normal;
+  margin-left: -3rem;
+  margin-right: .5rem;
+  padding: 0 .2rem .1rem;
+}
+.right-audit .content a.active h4 i,
+.right-child .content a.active h4 i,
+.right-drug .content a.active h4 i {
+  background-color: #29adc3;
+  color: white;
+}
+.right-audit .content a.group:after,
+.right-child .content a.group:after,
+.right-drug .content a.group:after,
+.right-audit .content a.group:before,
+.right-child .content a.group:before,
+.right-drug .content a.group:before {
+  background-color: #29adc3;
+  content: "";
+  height: 50%;
+  left: -.2rem;
+  position: absolute;
+  width: .2rem;
+}
+.right-audit .content a.group:after,
+.right-child .content a.group:after,
+.right-drug .content a.group:after,
+.right-audit .content a.group.head:before,
+.right-child .content a.group.head:before,
+.right-drug .content a.group.head:before {
+  top: 50%;
+}
+.right-audit .content a.group.foot:after,
+.right-child .content a.group.foot:after,
+.right-drug .content a.group.foot:after,
+.right-audit .content a.group.head:before,
+.right-child .content a.group.head:before,
+.right-drug .content a.group.head:before {
+  height: .2rem;
+  width: .5rem;
+}
+.right-audit .content .scroll-x,
+.right-child .content .scroll-x,
+.right-drug .content .scroll-x {
+  bottom: 6rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+  position: absolute;
+  width: 100%;
+  z-index: 1032;
+}
+.right-audit .content .scroll-x ul[role="tablist"],
+.right-child .content .scroll-x ul[role="tablist"],
+.right-drug .content .scroll-x ul[role="tablist"] {
+  border-bottom: none;
+  width: max-content;
+  width: -moz-max-content;
+}
+.right-audit .content .scroll-x ul[role="tablist"] a,
+.right-child .content .scroll-x ul[role="tablist"] a,
+.right-drug .content .scroll-x ul[role="tablist"] a {
+  background-color: #e6e6e6;
+  border-top-left-radius: .5rem;
+  -moz-border-top-left-radius: .5rem;
+  -o-border-top-left-radius: .5rem;
+  -webkit-border-top-left-radius: .5rem;
+  border-top-right-radius: .5rem;
+  -moz-border-top-right-radius: .5rem;
+  -o-border-top-right-radius: .5rem;
+  -webkit-border-top-right-radius: .5rem;
+  color: #333;
+  margin: 0 .2rem;
+  padding: .3rem 2rem;
+}
+.right-audit .content .scroll-x ul[role="tablist"] a.active,
+.right-child .content .scroll-x ul[role="tablist"] a.active,
+.right-drug .content .scroll-x ul[role="tablist"] a.active {
+  background-color: white;
+}
+.right-audit .card,
+.right-child .card,
+.right-drug .card {
+  border: none;
+}
+.right-audit .card .card-header,
+.right-child .card .card-header,
+.right-drug .card .card-header {
+  background-color: white;
+  border-bottom: none;
+  padding: 0;
+}
+.right-audit .card .card-header .operation,
+.right-child .card .card-header .operation,
+.right-drug .card .card-header .operation,
+.right-audit .card .card-header .test,
+.right-child .card .card-header .test,
+.right-drug .card .card-header .test {
+  padding-bottom: .1rem;
+}
+.right-audit .card .card-header .operation h4 span,
+.right-child .card .card-header .operation h4 span,
+.right-drug .card .card-header .operation h4 span,
+.right-audit .card .card-header .test h4 span,
+.right-child .card .card-header .test h4 span,
+.right-drug .card .card-header .test h4 span {
+  float: right;
+  font-weight: normal;
+  margin-right: .5rem;
+}
+.right-audit .card .card-header .operation .body li span,
+.right-child .card .card-header .operation .body li span,
+.right-drug .card .card-header .operation .body li span,
+.right-audit .card .card-header .test .body li span,
+.right-child .card .card-header .test .body li span,
+.right-drug .card .card-header .test .body li span {
+  color: #999999;
+  float: right;
+  font-size: 1.4rem;
+}
+.right-audit .card .card-header .operation .card-body,
+.right-child .card .card-header .operation .card-body,
+.right-drug .card .card-header .operation .card-body,
+.right-audit .card .card-header .test .card-body,
+.right-child .card .card-header .test .card-body,
+.right-drug .card .card-header .test .card-body {
+  padding: 0;
+}
+.right-audit .card .card-header .operation .card-body ul li,
+.right-child .card .card-header .operation .card-body ul li,
+.right-drug .card .card-header .operation .card-body ul li,
+.right-audit .card .card-header .test .card-body ul li,
+.right-child .card .card-header .test .card-body ul li,
+.right-drug .card .card-header .test .card-body ul li {
+  margin: .5rem;
+}
+.right-audit .card .card-header .operation .card-body ul li .col,
+.right-child .card .card-header .operation .card-body ul li .col,
+.right-drug .card .card-header .operation .card-body ul li .col,
+.right-audit .card .card-header .test .card-body ul li .col,
+.right-child .card .card-header .test .card-body ul li .col,
+.right-drug .card .card-header .test .card-body ul li .col {
+  background-color: #29adc3;
+  color: white;
+  padding: 0;
+}
+.right-audit .card .card-header .operation .card-body ul li .col h5,
+.right-child .card .card-header .operation .card-body ul li .col h5,
+.right-drug .card .card-header .operation .card-body ul li .col h5,
+.right-audit .card .card-header .test .card-body ul li .col h5,
+.right-child .card .card-header .test .card-body ul li .col h5,
+.right-drug .card .card-header .test .card-body ul li .col h5 {
+  margin: .5rem 0 0;
+}
+.right-audit .card .card-header .operation .card-body ul li .col p,
+.right-child .card .card-header .operation .card-body ul li .col p,
+.right-drug .card .card-header .operation .card-body ul li .col p,
+.right-audit .card .card-header .test .card-body ul li .col p,
+.right-child .card .card-header .test .card-body ul li .col p,
+.right-drug .card .card-header .test .card-body ul li .col p {
+  margin-bottom: .5rem;
+}
+.right-audit .card .card-header .operation .card-body ul li h3,
+.right-child .card .card-header .operation .card-body ul li h3,
+.right-drug .card .card-header .operation .card-body ul li h3,
+.right-audit .card .card-header .test .card-body ul li h3,
+.right-child .card .card-header .test .card-body ul li h3,
+.right-drug .card .card-header .test .card-body ul li h3 {
+  background-color: #f2f2f2;
+  display: grid;
+  font-size: 1.2rem;
+  margin-bottom: 0;
+  padding: 1.25rem .5rem 1rem;
+  text-align: center;
+  width: 4rem;
+}
+.right-audit .card .card-header .operation .card-body ul li h3:first-child,
+.right-child .card .card-header .operation .card-body ul li h3:first-child,
+.right-drug .card .card-header .operation .card-body ul li h3:first-child,
+.right-audit .card .card-header .test .card-body ul li h3:first-child,
+.right-child .card .card-header .test .card-body ul li h3:first-child,
+.right-drug .card .card-header .test .card-body ul li h3:first-child {
+  border-top-left-radius: .3rem;
+  -moz-border-top-left-radius: .3rem;
+  -o-border-top-left-radius: .3rem;
+  -webkit-border-top-left-radius: .3rem;
+  border-bottom-left-radius: .3rem;
+  -moz-border-bottom-left-radius: .3rem;
+  -o-border-bottom-left-radius: .3rem;
+  -webkit-border-bottom-left-radius: .3rem;
+}
+.right-audit .card .card-header .operation h4 i,
+.right-child .card .card-header .operation h4 i,
+.right-drug .card .card-header .operation h4 i {
+  background-color: #29adc3;
+  color: white;
+  padding: .5rem;
+}
+.right-audit .card .card-header .operation .card-body ul li .col,
+.right-child .card .card-header .operation .card-body ul li .col,
+.right-drug .card .card-header .operation .card-body ul li .col {
+  border-top-right-radius: .3rem;
+  -moz-border-top-right-radius: .3rem;
+  -o-border-top-right-radius: .3rem;
+  -webkit-border-top-right-radius: .3rem;
+  border-bottom-right-radius: .3rem;
+  -moz-border-bottom-right-radius: .3rem;
+  -o-border-bottom-right-radius: .3rem;
+  -webkit-border-bottom-right-radius: .3rem;
+}
+.right-audit .card .card-header .operation .card-body ul li .col h5,
+.right-child .card .card-header .operation .card-body ul li .col h5,
+.right-drug .card .card-header .operation .card-body ul li .col h5 {
+  padding: 0 1rem;
+}
+.right-audit .card .card-header .operation .card-body ul li .col p,
+.right-child .card .card-header .operation .card-body ul li .col p,
+.right-drug .card .card-header .operation .card-body ul li .col p {
+  padding: 0 1rem;
+}
+.right-audit .card .card-header .test h4 i,
+.right-child .card .card-header .test h4 i,
+.right-drug .card .card-header .test h4 i {
+  background-color: #29adc3;
+  color: white;
+  padding: .5rem;
+}
+.right-audit .card .card-header .test h4:after,
+.right-child .card .card-header .test h4:after,
+.right-drug .card .card-header .test h4:after {
+  background-color: #29adc3;
+  color: white;
+  content: "N";
+  padding: .4rem .5rem;
+  position: absolute;
+  right: 0;
+  top: .5rem;
+}
+.right-audit .card .card-header .test h4.R:after,
+.right-child .card .card-header .test h4.R:after,
+.right-drug .card .card-header .test h4.R:after {
+  background-color: #e33636;
+  content: "H";
+}
+.right-audit .card .card-header .test .card-body ul li .col h5,
+.right-child .card .card-header .test .card-body ul li .col h5,
+.right-drug .card .card-header .test .card-body ul li .col h5,
+.right-audit .card .card-header .test .card-body ul li .col p,
+.right-child .card .card-header .test .card-body ul li .col p,
+.right-drug .card .card-header .test .card-body ul li .col p {
+  padding: 0 .5rem .25rem;
+}
+.right-audit .card .card-header .test .card-body ul li .col h5 > span,
+.right-child .card .card-header .test .card-body ul li .col h5 > span,
+.right-drug .card .card-header .test .card-body ul li .col h5 > span,
+.right-audit .card .card-header .test .card-body ul li .col p > span,
+.right-child .card .card-header .test .card-body ul li .col p > span,
+.right-drug .card .card-header .test .card-body ul li .col p > span {
+  display: block;
+  float: right;
+}
+.right-audit .card .card-header .test .card-body ul li .col p,
+.right-child .card .card-header .test .card-body ul li .col p,
+.right-drug .card .card-header .test .card-body ul li .col p {
+  background-color: #f2f2f2;
+  border-bottom: 1px solid #f2f2f2;
+  color: #333;
+  margin-bottom: 0;
+}
+.right-audit .card .card-header .test .card-body ul li h3:last-child,
+.right-child .card .card-header .test .card-body ul li h3:last-child,
+.right-drug .card .card-header .test .card-body ul li h3:last-child {
+  border-top-right-radius: .3rem;
+  -moz-border-top-right-radius: .3rem;
+  -o-border-top-right-radius: .3rem;
+  -webkit-border-top-right-radius: .3rem;
+  border-bottom-right-radius: .3rem;
+  -moz-border-bottom-right-radius: .3rem;
+  -o-border-bottom-right-radius: .3rem;
+  -webkit-border-bottom-right-radius: .3rem;
+}
+.right-audit .card .card-header .test .card-body ul li .warn,
+.right-child .card .card-header .test .card-body ul li .warn,
+.right-drug .card .card-header .test .card-body ul li .warn {
+  background-color: #29adc3;
+  color: white;
+}
+.right-audit .card .card-header .test .card-body ul li.H .warn,
+.right-child .card .card-header .test .card-body ul li.H .warn,
+.right-drug .card .card-header .test .card-body ul li.H .warn,
+.right-audit .card .card-header .test .card-body ul li.L .warn,
+.right-child .card .card-header .test .card-body ul li.L .warn,
+.right-drug .card .card-header .test .card-body ul li.L .warn {
+  background-color: #e33636;
+}
+.right-audit.opened,
+.right-child.opened,
+.right-drug.opened {
+  right: 0;
+}
+.right-audit .content .tab-content {
+  padding: 1rem;
+}
+.right-audit .content .tab-content li {
+  margin: 0 .5rem 1rem;
+}
+.right-audit .content .tab-content li span {
+  border: 1px solid #29adc3;
+  color: #29adc3;
+  text-align: left;
+  white-space: normal;
+}
+.right-audit .content .tab-content li span.checked {
+  background-color: #29adc3;
+  color: white;
+}
+.right-child dl {
+  padding: 2rem;
+}
+.right-child dl dd {
+  margin-right: 2rem;
+}
+.right-drug {
+  padding: 0;
+}
+.right-drug .content {
+  padding: 1rem 2rem;
+}
+.right-drug .content dd:last-child {
+  padding-bottom: 15rem;
+}
+.right-drug .content dt {
+  padding-top: 2rem;
+}
+.right-drug .content h4 {
+  padding-top: 2rem;
+  text-align: center;
+}
+.right-drug .title {
+  color: white;
+  text-align: right;
+  padding: 0 1rem !important;
+}
+@media (max-width: 575px) {
+  .right-audit .card .card-header .test .card-body ul li .col h5 > span,
+  .right-child .card .card-header .test .card-body ul li .col h5 > span,
+  .right-drug .card .card-header .test .card-body ul li .col h5 > span,
+  .right-audit .card .card-header .test .card-body ul li .col p > span,
+  .right-child .card .card-header .test .card-body ul li .col p > span,
+  .right-drug .card .card-header .test .card-body ul li .col p > span {
+    float: inherit;
+  }
+  .right-audit .card .card-header .test .card-body ul li h3.col-auto,
+  .right-child .card .card-header .test .card-body ul li h3.col-auto,
+  .right-drug .card .card-header .test .card-body ul li h3.col-auto {
+    display: none;
+  }
+  .form-group.select label {
+    width: 6rem;
+  }
+}
+@media (max-width: 767px) {
+  nav.navbar.navbar-light a.navbar-brand.pass {
+    top: 0;
+  }
+  nav.navbar.navbar-light .navbar-collapse .navbar-nav li .nav-link {
+    color: #29adc3;
+    margin-top: -.5rem;
+  }
+  nav.navbar.navbar-light .right-select {
+    left: -14rem;
+  }
+  nav.navbar.navbar-light .right-select.opened {
+    left: 0;
+    z-index: 1032;
+  }
+  .patientexamine {
+    padding-top: 6rem;
+  }
+}
