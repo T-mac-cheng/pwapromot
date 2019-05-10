@@ -49,6 +49,7 @@
     var deferredPrompt = null;
     window.addEventListener('beforeinstallprompt', function (e) {
          e.userChoice.then(function (choiceResult) {
+            console.log('enter');
         if (choiceResult.outcome === 'dismissed') {
             console.log('用户取消安装应用');
         }
