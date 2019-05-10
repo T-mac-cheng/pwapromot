@@ -48,7 +48,7 @@
     var button = document.getElementById('btn');
     var deferredPrompt = null;
     window.addEventListener('beforeinstallprompt', function (e) {
-         e.userChoice.then(function (choiceResult) {
+      /*   e.userChoice.then(function (choiceResult) {
             console.log('enter');
         if (choiceResult.outcome === 'dismissed') {
             console.log('用户取消安装应用');
@@ -56,7 +56,7 @@
         else {
             console.log('用户安装了应用');
         }
-    });
+    });*/
         // 将事件返回存储起来
         deferredPrompt = e;
 
