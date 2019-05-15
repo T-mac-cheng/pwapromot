@@ -51,19 +51,19 @@
 
         if(u.indexOf('iPhone') > -1){
             alert("ios")
-            window.location.href="https://itunes.apple.com";
+          //  window.location.href="https://itunes.apple.com";
             // 最核心的代码-----------
             var loadDateTime = new Date();
             window.setTimeout(function() {
                     var timeOutDateTime = new Date();
                     if (timeOutDateTime - loadDateTime < 5000) {
-                        window.location = "";
+                        window.location = "URL Scheme://ios";
                     } else {
                         window.close();
                     }
                 },
                 25);
-        //   window.location = "URL Scheme://ios";
+        //  
 
         }else{
             alert("Android")
