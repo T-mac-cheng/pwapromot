@@ -46,25 +46,11 @@
             alert('请在浏览器中打开');
             return;
         }
-        var d = new Date();
-        var t0 = d.getTime();
+       
 
         if(u.indexOf('iPhone') > -1){
-            alert("ios")
-          //  window.location.href="https://itunes.apple.com";
-            // 最核心的代码-----------
-            var loadDateTime = new Date();
-            window.setTimeout(function() {
-                    var timeOutDateTime = new Date();
-                    if (timeOutDateTime - loadDateTime < 5000) {
-                        window.location = "itms-apps://itunes.apple.com/us/app/imdb-movies-tv/id342792525";
-                    } else {
-                        window.close();
-                    }
-                },
-                25);
-        //  
-
+         alert("你当前的Ios系统版本为："+ver[1].replace(/_/g,"."));
+         
         }else{
             alert("Android")
             //Android
