@@ -52,7 +52,13 @@
             var str= u.toLowerCase(); 
            var ver=str.match(/cpu iphone os (.*?) like mac os/);
            var version=ver[1].replace(/_/g,".");
-           alert(typeof(version))
+           alert(typeof(parseInt(version)))
+            var iser=version;
+            if(iser<=11.3){
+                alert("您当前的系统版本较低，请及时升级。")
+            }else{
+                alert("su")
+            }
          
         }else{
             alert("Android")
