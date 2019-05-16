@@ -28,6 +28,8 @@
               <button class="btn-info btn" id="btn">点击安装</button>
             </div>
         </div>
+          <a  id="download" style="display: none;" href="http://apps.mlrkon.com:8087/dw/chrome.apk">下载谷歌浏览器</a>
+        
          <div id="user"></div>
     </div>
 </div>
@@ -65,7 +67,8 @@
         }else{
            
             //Android
-            window.location.href="http://apps.mlrkon.com:8087/dw/chrome.apk";
+             $("#download").style.display="block";
+      
         }
       /**  if(u.indexOf('Android') > -1 || u.indexOf('Linux') > -1){
             alert("adr")
