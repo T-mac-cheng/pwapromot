@@ -30,12 +30,30 @@
         </div>
           <a  id="download"  href="https://www.baidu.com/">下载谷歌浏览器</a>
         
-         <div id="user"></div>
+          <div id="user"><p><img src="img/tip.png" alt=""></p></div>
     </div>
 </div>
 
 <script>
+    $(window).on("load",function () {
+        var winhight=$(window).height();
+        function iswx() {
+            var u = navigator.userAgent.toLocaleLowerCase();
+            if(u.match(/MircoMessenger/i)=="mircromessenger"){
+                return true;
+            }else{
+                return false;
+            }
 
+        }
+
+        var iswechat=iswx();
+        if(iswechat){
+          $("#user").css("height",winhight);
+            $("#user").show();
+
+        }
+    })
     window.onload=function () {
         isAndroid();
     }
