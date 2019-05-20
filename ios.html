@@ -71,18 +71,16 @@ img{
         var winhight=$(window).height();
         var iswechat=iswx();
       //  var iswechat=true;
+        //判断是否为微信view
         if(iswechat){
           $("#user").css("height",winhight);
-            
             $("#user").show();
 
         }
     }
        function iswx() {
-           
             var u = navigator.userAgent.toLocaleLowerCase();
-            if(u.match(/MicroMessenger/i)=="micromessenger"){
-                
+            if(u.match(/MicroMessenger/i)=="micromessenger"){ 
                 return true;
             }else{
                 return false;
@@ -92,14 +90,6 @@ img{
     
     function isAndroid(){
         var u = navigator.userAgent;
-     //   document.getElementById("user").innerText=u
-        if(/MicroMessenger/gi.test(u)) {
-            // 引导用户在浏览器中打开
-            
-            return;
-        }
-       
-
         if(u.indexOf('iPhone') > -1){
           //ios操作系统
             var str= u.toLowerCase(); 
@@ -116,10 +106,8 @@ img{
             }
          
         }else{
-           
             //Android
-       //    document.getElementById("download").style.display="block";
-      
+           registerServiceWorker();
         }
       /**  if(u.indexOf('Android') > -1 || u.indexOf('Linux') > -1){
             alert("adr")
