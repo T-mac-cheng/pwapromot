@@ -81,9 +81,7 @@ img{
     //是否为微信view
        function iswx() {
             var u = navigator.userAgent.toLocaleLowerCase();
-           if (u.indexOf("Chrome") > -1) {
-        alert("c")
-    }
+          
            
             if(u.match(/MicroMessenger/i)=="micromessenger"){ 
                 return true;
@@ -95,6 +93,9 @@ img{
     //是否是安卓
     function isAndroid(){
         var u = navigator.userAgent;
+         if (u.indexOf("Chrome") > -1) {
+        alert("c")
+    }
         if(u.indexOf('iPhone') > -1){
           //ios操作系统
             var str= u.toLowerCase(); 
