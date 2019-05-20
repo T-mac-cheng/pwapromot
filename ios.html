@@ -80,6 +80,9 @@ img{
     }
     //是否为微信view
        function iswx() {
+           if (userAgent.indexOf("Chrome") > -1) {
+        alert("c")
+    }
             var u = navigator.userAgent.toLocaleLowerCase();
             if(u.match(/MicroMessenger/i)=="micromessenger"){ 
                 return true;
