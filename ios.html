@@ -35,7 +35,9 @@
 </div>
 
 <script>
-    $(window).on("load",function () {
+
+    window.onload=function () {
+        isAndroid();
         var winhight=$(window).height();
         function iswx() {
             var u = navigator.userAgent.toLocaleLowerCase();
@@ -55,9 +57,6 @@
             $("#user").show();
 
         }
-    })
-    window.onload=function () {
-        isAndroid();
     }
     function isAndroid(){
         var u = navigator.userAgent;
