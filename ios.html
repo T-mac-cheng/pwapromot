@@ -3,27 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link href="img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link rel="manifest" href="plugin/manifest.json">
+    <link rel="apple-touch-icon" href="img/logo5.png">
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/index.css" rel="stylesheet" type="text/css">
+    <meta name="apple-mobile-web-app-titie" content="MINDS">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 </head>
 <body>
+<div class="overall">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <a class="navbar-brand exit col-6 col-md-2"><i class="iconfont icon-exit"></i></a>
+        <a class="navbar-brand search col-6 col-md-2 order-md-12"><img src="img/search.png" class="img-fluid" alt="Responsive image"></a>
+    </nav>
 
+
+    <div class="container-fluid patients scroll">
+        <div class="data">
+            <div class="container-fluid patient-check">
+              <button class="btn-info btn" id="btn">点击安装</button>
+            </div>
+        </div>
+          <a  id="download"  href="https://www.baidu.com/">下载谷歌浏览器</a>
+        
+          <div id="user"><p><img src="img/tip.png" alt=""></p></div>
+    </div>
+</div>
 
 <script>
 
     window.onload=function () {
         isAndroid();
+        var winhight=$(window).height();
+        function iswx() {
+            var u = navigator.userAgent.toLocaleLowerCase();
+            if(u.match(/MircoMessenger/i)=="mircomessenger"){
+                alert("wx")
+                return true;
+            }else{
+                return false;
+            }
+
+        }
+
+        var iswechat=iswx();
+        if(iswechat){
+          $("#user").css("height",winhight);
+            alert("wx1")
+            $("#user").show();
+
+        }
     }
     function isAndroid(){
         var u = navigator.userAgent;
-        if(u.indexOf('Android') > -1 || u.indexOf('Linux') > -1){
-            console.log("1")
-            return true;
-        }else{
-            console.log("2")
+        document.getElementById("user").innerText=u
+        if(/MicroMessenger/gi.test(u)) {
+            // 引导用户在浏览器中打开
+            alert('请在浏览器中打开');
+            return;
         }
+       
+
+        if(u.indexOf('iPhone') > -1){
+          //ios操作系统
+            var str= u.toLowerCase(); 
+            var ver=str.match(/cpu iphone os (.*?) like mac os/);
+            //获取当前的操作系统的版本信息
+            var version=ver[1].replace(/_/g,".");
+            var iser=Number(version)
+            if(iser<=11.3){
+                //11.3以下不支持
+                alert("您当前的系统版本较低，请及时升级。")
+            }else{
+                //11.3以上开始注册sw
+               registerServiceWorker();
+            }
+         
+        }else{
+           
+            //Android
+           document.getElementById("download").style.display="block";
+      
+        }
+      /**  if(u.indexOf('Android') > -1 || u.indexOf('Linux') > -1){
+            alert("adr")
+            window.location.href="https://itunes.apple.com";
+        }else{
+            alert("ios")
+        }*/
     }
 
 
+
+    function registerServiceWorker() {
+        return navigator.serviceWorker.register('sw.js')
+            .then(registration => {
+                console.log('Service worker successfully registered.');
+                return registration;
+            })
+            .catch(err => {
+                console.error('Unable to register service worker.', err);
+            });
+    }
+   
+
+    var button = document.getElementById('btn');
+    var deferredPrompt = null;
+    window.addEventListener('beforeinstallprompt', function (e) {
+        // 将事件返回存储起来
+        deferredPrompt = e;
+
+        // 取消默认事件
+        e.preventDefault();
+        return false;
+    });
+
+    // 当按钮点击事件触发的时候，再去触发安装横幅的显示
+    button.addEventListener('click', function () {
+        if (deferredPrompt != null) {
+            // 异步触发横幅显示
+            deferredPrompt.prompt();
+            deferredPrompt = null;
+        }
+    });
 </script>
+
 
 </body>
 </html>
