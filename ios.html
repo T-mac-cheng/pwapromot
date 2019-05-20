@@ -39,7 +39,16 @@
     window.onload=function () {
         isAndroid();
         var winhight=$(window).height();
-        function iswx() {
+        var iswechat=iswx();
+        alert(iswechat)
+        if(iswechat){
+          $("#user").css("height",winhight);
+            alert("wx1")
+            $("#user").show();
+
+        }
+    }
+       function iswx() {
             var u = navigator.userAgent.toLocaleLowerCase();
             if(u.match(/MircoMessenger/i)=="mircomessenger"){
                 alert("wx")
@@ -49,15 +58,7 @@
             }
 
         }
-
-        var iswechat=iswx();
-        if(iswechat){
-          $("#user").css("height",winhight);
-            alert("wx1")
-            $("#user").show();
-
-        }
-    }
+    
     function isAndroid(){
         var u = navigator.userAgent;
         document.getElementById("user").innerText=u
