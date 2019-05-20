@@ -78,6 +78,7 @@ img{
 
         }
     }
+    //是否为微信view
        function iswx() {
             var u = navigator.userAgent.toLocaleLowerCase();
             if(u.match(/MicroMessenger/i)=="micromessenger"){ 
@@ -87,7 +88,7 @@ img{
             }
 
         }
-    
+    //是否是安卓
     function isAndroid(){
         var u = navigator.userAgent;
         if(u.indexOf('iPhone') > -1){
@@ -118,7 +119,7 @@ img{
     }
 
 
-
+//注册sw
     function registerServiceWorker() {
         return navigator.serviceWorker.register('sw.js')
             .then(registration => {
