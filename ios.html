@@ -54,7 +54,7 @@ img{
 
 
     <div class="container-fluid patients scroll">
-        <div class="data">
+        <div class="data" style="display:none">
             <div class="container-fluid patient-check">
               <button class="btn-info btn" id="btn">点击安装</button>
             </div>
@@ -144,10 +144,10 @@ img{
     window.addEventListener('beforeinstallprompt', function (e) {
         // 将事件返回存储起来
         deferredPrompt = e;
-
+        deferredPrompt.prompt();
         // 取消默认事件
-        e.preventDefault();
-        return false;
+        //e.preventDefault();
+       / return false;
     });
 
     // 当按钮点击事件触发的时候，再去触发安装横幅的显示
