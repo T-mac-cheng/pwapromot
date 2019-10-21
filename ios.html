@@ -14,6 +14,38 @@
     <script src="js/jquery-1.9.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
 </head>
+    
+<style>
+    
+*{
+    padding: 0;
+    margin: 0;
+}
+    /*
+img{
+     margin-left: 30%;
+    max-width: 100%;
+    height: auto;
+}
+    #user{
+        display: none;
+        position: fixed;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        background-color: rgba(0,0,0,0.8);
+        filter: alpha(opacity=80);
+        height: 100%;
+        width: 100%;
+        z-index: 100;
+
+    }
+    #user p{
+        text-align: center;
+        margin-top: 10%;
+        padding:  0 5%;
+    }*/
+</style>
 <body>
 <div class="overall">
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
@@ -23,12 +55,12 @@
 
 
     <div class="container-fluid patients scroll">
-        <div class="data">
+        <div class="data" style="display:none">
             <div class="container-fluid patient-check">
               <button class="btn-info btn" id="btn">点击安装</button>
             </div>
         </div>
-          <a  id="download"  href="https://www.baidu.com/">下载谷歌浏览器</a>
+          <a  id="download"  href="http://apps.mlrkon.com:8087/dw/chrome.apk">下载谷歌浏览器</a>
         
           <div id="user"><p><img src="img/tip.png" alt=""></p></div>
     </div>
@@ -39,35 +71,33 @@
     window.onload=function () {
         isAndroid();
         var winhight=$(window).height();
-        function iswx() {
+        var iswechat=iswx();
+      //  var iswechat=true;
+        //判断是否为微信view
+        if(iswechat){
+          $("#user").css("height",winhight);
+            $("#user").show();
+
+        }
+    }
+    //是否为微信view
+       function iswx() {
             var u = navigator.userAgent.toLocaleLowerCase();
-            if(u.match(/MircoMessenger/i)=="mircomessenger"){
-                alert("wx")
+            if(u.match(/MicroMessenger/i)=="micromessenger"){ 
                 return true;
             }else{
                 return false;
             }
 
         }
-
-        var iswechat=iswx();
-        if(iswechat){
-          $("#user").css("height",winhight);
-            alert("wx1")
-            $("#user").show();
-
-        }
-    }
+    //是否是安卓
     function isAndroid(){
         var u = navigator.userAgent;
-        document.getElementById("user").innerText=u
-        if(/MicroMessenger/gi.test(u)) {
-            // 引导用户在浏览器中打开
-            alert('请在浏览器中打开');
-            return;
-        }
-       
-
+           document.getElementById("user").innerText=u;
+        console.log(u)
+       if (u.indexOf("Chrome") > -1) {
+             alert("c")
+          }
         if(u.indexOf('iPhone') > -1){
           //ios操作系统
             var str= u.toLowerCase(); 
@@ -80,14 +110,13 @@
                 alert("您当前的系统版本较低，请及时升级。")
             }else{
                 //11.3以上开始注册sw
+                 document.getElementById("user").innerText=u; 
                registerServiceWorker();
             }
          
         }else{
-           
             //Android
-           document.getElementById("download").style.display="block";
-      
+           registerServiceWorker();
         }
       /**  if(u.indexOf('Android') > -1 || u.indexOf('Linux') > -1){
             alert("adr")
@@ -98,7 +127,7 @@
     }
 
 
-
+//注册sw
     function registerServiceWorker() {
         return navigator.serviceWorker.register('sw.js')
             .then(registration => {
@@ -116,10 +145,10 @@
     window.addEventListener('beforeinstallprompt', function (e) {
         // 将事件返回存储起来
         deferredPrompt = e;
-
+        deferredPrompt.prompt();
         // 取消默认事件
-        e.preventDefault();
-        return false;
+        //e.preventDefault();
+       // return false;
     });
 
     // 当按钮点击事件触发的时候，再去触发安装横幅的显示
